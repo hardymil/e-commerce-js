@@ -1,12 +1,10 @@
-import './categories.style.scss'
+import './directory.style.scss'
 import CategoryItem from '../category-item/category-item.component';
 
-const Categories = (props) => {
-
-    const {categories} = props;
+const Directory = ({categories}) => {
 
     return(
-        <div className="categories-container">
+        <div className="directory-container">
         {categories.map((category) => (
           <CategoryItem key={category.id} category = {category}/>
         ))} 
@@ -15,4 +13,4 @@ const Categories = (props) => {
       
 }
 
-export default Categories; 
+export default Directory; 
