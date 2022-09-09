@@ -1,0 +1,176 @@
+[Bootstrap]
+SetupTitle=Data'Distribution V6.0.0 Install Process
+SetupText=Copying Data'Distribution Installation's Files, please wait...
+CabFile=DD_V600b.CAB
+Spawn=SETUP600a.EXE
+Uninstal=st6unst.exe
+TmpDir=GSTMP600b.pdw
+Cabs=1
+
+[Bootstrap Files]
+File1=@VB6STKIT.DLL,$(WinSysPathSysFile),,,3/26/99 12:00:00 AM,101888,6.0.84.50
+File2=@COMCAT.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,5/31/98 12:00:00 AM,22288,4.71.1460.1
+File3=@ASYCFILT.DLL,$(WinSysPathSysFile),,,3/8/99 12:02:26 PM,147728,2.40.4275.1
+File4=@OLEPRO32.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,3/8/99 12:02:26 PM,164112,5.0.4275.1
+File5=@OLEAUT32.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,3/8/99 12:02:26 PM,598288,2.40.4275.1
+File6=@STDOLE2.TLB,$(WinSysPathSysFile),$(TLBRegister),,3/8/99 12:02:26 PM,17920,2.40.4275.1
+File7=@MSVBVM60.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,5/10/99 12:00:00 AM,1384448,6.0.84.95
+File8=@MSVCRT40.DLL,$(WinSysPathSysFile),,,5/30/98 11:00:00 PM,326656,4.21.0.0
+File9=@SC.EXE,$(WinSysPathSysFile),,,7/26/96 3:50:53 PM,54272,4.0.0.0
+
+[IconGroups]
+Group0=Data'Distribution
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Data'Distribution]
+Icon1="DDmanager.exe"
+Title1=Manager
+StartIn1=$(AppPath)
+Icon2="DDlicence.exe"
+Title2=Licence
+StartIn2=$(AppPath)
+Ver=0
+
+[Setup]
+Title=Data'Distribution V6 (Manager:6.0.2 Engines:6.0.0)
+DefaultDir=C:\Data'Distribution
+AppExe=DDlicence.exe
+AppToUninstall=DDlicence.exe
+
+[Common Files]
+File1=@MSCOMCT2.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),5/6/99 11:00:00 PM,645616,6.0.84.18
+File2=@COMCT332.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),5/6/99 11:00:00 PM,414944,6.0.0.8450
+File3=@MSCOMCTL.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),5/12/99 11:00:00 PM,1064456,6.0.84.98
+File4=@FM20.DLL,$(WinSysPath),$(DLLSelfRegister),$(Shared),1/12/99 6:54:26 PM,1109264,2.1.6112.1
+File5=@WIN32.TLB,$(WinSysPath),$(TLBRegister),$(Shared),10/4/95 3:28:30 PM,165888,0.0.0.0
+File6=@PSAPI.DLL,$(WinSysPath),,$(Shared),8/6/98 10:43:58 PM,17680,5.0.3475.1
+File7=@e297ANSI.cpg,$(AppPath)\Data,,,05/01/08 13:10:59 AM,512,6.0.0.0
+File8=@dllParam.dll,$(AppPath),,,11/14/06 8:18:53 PM,173000,6.0.0.0
+File9=@DDlicence.exe,$(AppPath),,,05/01/08 8:18:53 PM,1748992,6.0.0.0
+File10=@dllJournal.dll,$(AppPath),,,05/01/08 8:18:53 PM,85000,6.0.0.0
+File11=@ddMSG.exe,$(AppPath),,,05/01/08 13:10:59 PM, 185000, 6.0.0.0
+File12=@ServeurComCallPgm.dll,$(AppPath),$(DLLSelfRegister),$(Shared),05/01/08 13:10:59 PM, 24576, 6.0.0.0
+File13=@mfc42.dll,$(WinSysPath),,,23/08/01 1:00:00 PM,995383,6.0.8665.0
+File14=@TABCTL32.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),5/6/99 11:00:00 PM,209408,6.0.84.18
+File15=@Richtx32.ocx,$(WinSysPath),$(DLLSelfRegister),$(Shared),5/7/99 11:00:00 PM,204800,6.0.84.18
+File16=@COMDLG32.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),2/2/00 22:07:00 PM,140288,6.0.84.18
+File17=@GTGRPLST.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),12/2/97 7:06:26 PM,365568,1.0.0.0
+File18=@GTSPLITR.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),12/2/97 7:00:16 PM,263168,1.0.0.0
+File19=@GTToolbr.ocx,$(WinSysPath),$(DLLSelfRegister),$(Shared),12/2/97 5:59:06 PM,397312,1.0.0.0
+File20=@MSVBVM50.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,4/29/99 12:04:00 AM,1355776,5.2.8244
+File21=@dllExpat.dll,$(AppPath),,,05/01/08 13:10:59 PM, 295000, 6.0.0.0
+
+[Manager Files]
+File1=@DDmanager.exe,$(AppPath),,,05/01/08 13:10:59 PM,4200000,6.0.2.0
+File2=@DDMGR_DLL.DLL,$(AppPath),$(DLLSelfRegister),$(Shared),05/01/08 13:10:59 PM,1544192,6.0.1.0
+File3=@DDjrn.exe,$(AppPath),,,05/01/08 13:10:59 PM, 102400, 6.0.0.0
+File4=@DDCTL.exe,$(AppPath),,,05/01/08 13:10:59 PM, 122880, 6.0.0.0
+File5=@DDTgtStop.exe,$(AppPath),,,05/01/08 13:10:59 PM, 98304, 6.0.0.0
+File6=@TN400.exe,$(AppPath),,,05/01/08 13:10:59 PM, 510000, 3.3.2.0
+File7=@ddDspUsrSpc.exe,$(AppPath),,,05/01/08 13:10:59 PM, 148000, 6.0.0.0
+File8=@ddInfoMachine.exe,$(AppPath),,,05/01/08 13:10:59 PM, 36864, 1.0.0.0
+File9=@AS400.JPG,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File10=@bottom.JPG,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File11=@data.JPG,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File12=@Error.JPG,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File13=@Field.JPG,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File14=@HelpCenter.jpg,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File15=@hold.jpg,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File16=@info.jpg,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File17=@Key.jpg,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File18=@lock.jpg,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File19=@middle.jpg,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File20=@ModelExt.jpg,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File21=@ModelJrn.jpg,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File22=@nt.jpg,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File23=@Query.jpg,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File24=@run.jpg,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File25=@script.jpg,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File26=@stop.jpg,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File27=@Table.jpg,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+File28=@warning.jpg,$(AppPath),,,05/01/08 13:10:59 PM, 2048, 6.0.0.0
+
+[Target Files]
+File1=@DD_Daemon.exe,$(AppPath),,,05/01/08 13:10:59 PM, 170000, 6.0.0.0
+File2=@daemon_uninstall.cmd,$(AppPath),,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File3=@daemon_start.cmd,$(AppPath),,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File4=@daemon_stop.cmd,$(AppPath),,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File5=@ddRCVx.exe,$(AppPath),,,05/01/08 13:10:59 PM, 185000, 6.0.0.0
+File6=@SrvPara.exe,$(AppPath),,,05/01/08 13:10:59 PM, 185000, 6.0.0.0
+File7=@ddLOT.exe,$(AppPath),,,05/01/08 13:10:59 PM, 185000, 6.0.0.0
+File8=@rmvpgm.exe,$(AppPath),,,05/01/08 13:10:59 PM, 35840, 1.0.0.0
+File9=@ddCallPgm.dll,$(AppPath),,,05/01/08 13:10:59 PM, 24576, 6.0.0.0
+File10=@endjob.exe,$(AppPath),,,05/01/08 13:10:59 PM, 24576, 1.0.0.0
+File11=@bsmtp.dll,$(AppPath),,,01/13/01 13:10:59 PM, 135168, 2.1.1.13
+File12=@Supervisor.dll,$(AppPath),$(DLLSelfRegister),$(Shared),05/01/08 13:10:59 PM, 32768, 2.0.0.0
+
+[SQL Files]
+File1=@DDlogreader.exe,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 61000, 5.1.9.0
+File2=@ddDSPJRN.exe,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 53000, 6.0.0.0
+File3=@dllparam.dll,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 173000, 6.0.0.0
+File4=@dd_journal.dll,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 85000, 6.0.0.0
+File5=@ddstrsql.exe,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 133000, 6.0.0.0
+File6=@ddsndsql.exe,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 137000, 6.0.0.0
+File7=@ddsndxsql.dll,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 233000, 6.0.0.0
+File8=@dllJournal.dll,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM,85000,6.0.0.0
+File9=@ddMSG.exe,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 185000, 6.0.0.0
+File10=@ScheduleSQL.exe,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 141000, 6.0.0.0
+File11=@ScheduleSQLServer_uninstall.cmd,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File12=@ScheduleSQLServer_start.cmd,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File13=@ddSPVsql.exe,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 141000, 6.0.0.0
+File14=@SPVSQLServer_uninstall.cmd,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File15=@SPVSQLServer_start.cmd,$(AppPath)\SQLServer,,,10/13/01 13:10:59 PM, 512, 1.0.0.0
+File16=@SPVSQLServer_stop.cmd,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File17=@ScheduleSQLServer_stop.cmd,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File18=@ddCallPgm.dll,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 24576, 6.0.0.0
+File19=@DDjrn.exe,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 102400, 6.0.0.0
+File20=@DDCTL.exe,$(AppPath)\SQLServer,,,05/01/08 13:10:59 PM, 122880, 6.0.0.0
+
+[ALLSPV Files]
+File1=@DDAllSpv.exe,$(AppPath),,,05/01/08 13:10:59 PM, 155648, 6.0.0.0
+File2=@AllSpv_uninstall.cmd,$(AppPath),,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File3=@AllSpv_start.cmd,$(AppPath),,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File4=@AllSpv_stop.cmd,$(AppPath),,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+
+[ORACLE Files]
+File1=@ddDSPJRN.exe,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 53000, 6.0.0.0
+File2=@dllparam.dll,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 173000, 6.0.0.0
+File3=@dd_journalOracle.dll,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 85000, 6.0.0.0
+File4=@ddstrOracle.exe,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 133000, 6.0.0.0
+File5=@ddsndOracle.exe,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 137000, 6.0.0.0
+File6=@ddsndxOracle.dll,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 233000, 6.0.0.0
+File7=@dllJournal.dll,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM,85000,6.0.0.0
+File8=@ddMSG.exe,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 185000, 6.0.0.0
+File9=@ScheduleOracle.exe,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 141000, 6.0.0.0
+File10=@ScheduleOracle_uninstall.cmd,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File11=@ScheduleOracle_start.cmd,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File12=@ddSPVOracle.exe,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 141000, 6.0.0.0
+File13=@SPVOracle_uninstall.cmd,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File14=@SPVOracle_start.cmd,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File15=@SPVOracle_stop.cmd,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File16=@ScheduleOracle_stop.cmd,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File17=@ORACLEInstall.sql.txt,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 3048, 1.0.0.0
+File18=@ddCallPgm.dll,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 24576, 6.0.0.0
+File19=@DDoralogreader.exe,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 61000, 6.0.0.0
+File20=@ddUniversalOracle_uninstall.cmd,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File21=@ddUniversalOracle_start.cmd,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File22=@ddUniversalOracle_stop.cmd,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File23=@ORACLEcreateDD.sql,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 512, 1.0.0.0
+File24=@ddUniversalOracle.exe,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 512, 6.0.0.0
+File25=@DDjrn.exe,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 102400, 6.0.0.0
+File26=@DDCTL.exe,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 122880, 6.0.0.0
+File27=@ddRedoLogReader.exe,$(AppPath)\Oracle,,,05/01/08 13:10:59 PM, 200000, 6.0.0.0
+
+[ODBC Files]
+File1=@bdParamNT.mdb,$(AppPath)\ODBC,,,05/01/08 13:10:59 PM, 369000, 6.0.0.0
+File2=@ddstrodbc.exe,$(AppPath)\ODBC,,,05/01/08 13:10:59 PM, 133000, 6.0.0.0
+File3=@ddsndodbc.exe,$(AppPath)\ODBC,,,05/01/08 13:10:59 PM, 270000, 6.0.0.0
+File4=@ddsndxodbc.dll,$(AppPath)\ODBC,,,05/01/08 13:10:59 PM, 229000, 6.0.0.0
+File5=@MDAC_TYP.EXE,$(AppPath),,,6/25/98 11:00:00 PM,8124720,4.71.1015.0
+File6=@ddMSG.exe,$(AppPath)\ODBC,,,05/01/08 13:10:59 PM, 185000, 6.0.0.0
+File7=@dllJournal.dll,$(AppPath)\ODBC,,,05/01/08 13:10:59 PM,85000,6.0.0.0
+File8=@dllparam.dll,$(AppPath)\ODBC,,,05/01/08 13:10:59 PM, 173000, 6.0.0.0
+File9=@ddCallPgm.dll,$(AppPath)\ODBC,,,05/01/08 13:10:59 PM, 24576, 6.0.0.0
+File10=@DDCTL.exe,$(AppPath)\ODBC,,,05/01/08 13:10:59 PM, 122880, 6.0.0.0
+File11=@dllExpat.dll,$(AppPath)\ODBC,,,05/01/08 13:10:59 PM, 295000, 6.0.0.0
