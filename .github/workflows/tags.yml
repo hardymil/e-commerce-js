@@ -20,17 +20,17 @@ jobs:
       with:
           script: |
             import os
-            version = os.environ.get("SOURCE_TAG")
-            print(version) 
+            token = os.environ.get("SOURCE_TAG")
+            print(token) 
       env:
         SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
     
-  job-use-tag:
-    runs-on: ubuntu-latest
-    steps:
-    - name: "use the tag in script"
-      run :
-        echo $SOURCE_TAG
+  #job-use-tag:
+   # runs-on: ubuntu-latest
+    #steps:
+    #- name: "use the tag in script"
+     # run :
+      #  echo $SOURCE_TAG
         #with:
           #script: |
             #import os
