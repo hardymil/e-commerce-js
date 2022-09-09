@@ -31,6 +31,6 @@ jobs:
         with:
           script: |
             import os
-            print("Directory contents:")
-            for f in os.listdir():
-                print(f)
+            version = set_env("SOURCE_TAG")
+            print(version)
+
