@@ -31,6 +31,8 @@ jobs:
         with:
           script: |
             import os
-            version = set_env("SOURCE_TAG")
-            print(version)
-
+            print("It's stated")
+            version = os.environ.get("SOURCE_TAG")
+            if not version:
+              raise RuntimeError("SOURCE_TAG env var is not set!")
+            print("All good! we found our env var")
