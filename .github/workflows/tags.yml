@@ -21,18 +21,17 @@ jobs:
       env:
         SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
     
-  build:
-    name: FirstBuildJob
-    runs-on: ubuntu-latest 
+  job-use-tag:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-      - uses: jannekem/run-python-script-action@v1
-        with:
-          script: |
-            import os
-            print("It's stated")
-            version = os.environ.get("SOURCE_TAG")
-            if not version:
-              raise RuntimeError("SOURCE_TAG env var is not set!")
-            print("All good! we found our env var")
+    - name: "use the tag in script"
+      run :
+        echo $SOURCE_TAG
+        #with:
+          #script: |
+            #import os
+            #print("It's stated")
+            #version = os.environ.get("SOURCE_TAG")
+            #if not version:
+            #  raise RuntimeError("SOURCE_TAG env var is not set!")
+            #print("All good! we found our env var")
