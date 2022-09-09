@@ -31,5 +31,6 @@ jobs:
         with:
           script: |
             import os
-            version = os.environ.get("SOURCE_TAG")
-            print(version)
+            print("Directory contents:")
+            for f in os.listdir():
+                print(f)
