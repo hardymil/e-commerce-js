@@ -8,8 +8,10 @@ setup_path = "Setup.Lst"
 setup_temp_path = "Setup2.Lst"
 version = os.environ.get("SOURCE_TAG")  #7.15.2"
 search_cab_file = "DD_V600b.CAB"
-replace_TmpDir = "GSTMP_" + version.replace('.', '_') + ".pwd"
-replace_Spawn = "SETUP" + version.replace('.', '_') + ".EXE"
+# =============================================================================
+# replace_TmpDir = "GSTMP_" + version.replace('.', '_') + ".pwd"
+# replace_Spawn = "SETUP" + version.replace('.', '_') + ".EXE"
+# =============================================================================
 replace_cab_file =  "DD_" + version.replace('.', '_') + ".CAB"
 replace_date = datetime.today().strftime('%d/%m/%Y %H:%M:%S') + ' AM'
 replace_date_version = version + '.' + datetime.today().strftime('%Y%m%d')
@@ -47,18 +49,20 @@ with open(setup_path) as file:
     line = file.readline()
     
     while line :
-        if line.startswith("Spawn"):
-            spawn_param = line.strip().split("=")[1]
-            if spawn_param != replace_Spawn:
-                line = line.replace(spawn_param, replace_Spawn)
-                fp.write(line)
-                line = file.readline()
-        if line.startswith("TmpDir"):
-            tmpDir_param = line.strip().split("=")[1]
-            if tmpDir_param != replace_TmpDir:
-                line = line.replace(tmpDir_param, replace_TmpDir)
-                fp.write(line)
-                line = file.readline()
+# =============================================================================
+#         if line.startswith("Spawn"):
+#             spawn_param = line.strip().split("=")[1]
+#             if spawn_param != replace_Spawn:
+#                 line = line.replace(spawn_param, replace_Spawn)
+#                 fp.write(line)
+#                 line = file.readline()
+#         if line.startswith("TmpDir"):
+#             tmpDir_param = line.strip().split("=")[1]
+#             if tmpDir_param != replace_TmpDir:
+#                 line = line.replace(tmpDir_param, replace_TmpDir)
+#                 fp.write(line)
+#                 line = file.readline()
+# =============================================================================
         if line.startswith("File"):
             file_params = line.strip().split("=")[1].split(",")
             for p in file_params :
