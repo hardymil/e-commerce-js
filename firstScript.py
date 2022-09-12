@@ -6,7 +6,7 @@ from datetime import datetime
 
 setup_path = "Setup.Lst"
 setup_temp_path = "Setup2.Lst"
-version = "7.15.2"
+version =  os.getenv("GITHUB_REF_NAME")
 search_cab_file = "DD_V600b.CAB"
 replace_TmpDir = "GSTMP_" + version.replace('.', '_') + ".pwd"
 replace_Spawn = "SETUP" + version.replace('.', '_') + ".EXE"
@@ -15,9 +15,6 @@ replace_date = datetime.today().strftime('%d/%m/%Y %H:%M:%S') + ' AM'
 replace_date_version = version + '.' + datetime.today().strftime('%Y%m%d')
 search_date = ""
 search_date_version = ""
-
-
-tag_var = os.getenv("GITHUB_REF_NAME")
 
 print(tag_var)
 
@@ -58,12 +55,14 @@ with open(setup_path) as file:
             spawn_param = line.strip().split("=")[1]
             if spawn_param != replace_Spawn:
                 line = line.replace(spawn_param, replace_Spawn)
+                print(line)
                 fp.write(line)
                 line = file.readline()
         if line.startswith("TmpDir"):
             tmpDir_param = line.strip().split("=")[1]
             if tmpDir_param != replace_TmpDir:
                 line = line.replace(tmpDir_param, replace_TmpDir)
+                print(line)
                 fp.write(line)
                 line = file.readline()
         if line.startswith("File"):
@@ -72,12 +71,15 @@ with open(setup_path) as file:
                 if p == file_params[0] and p.startswith('@dd') or p.startswith('@DD'):
                     search_date = file_params[4]
                     line = line.replace(search_date, replace_date)
+                    print(line)
                     fp.write(line)
                     line = file.readline()
                 else:
+                    print(line)
                     fp.write(line)
                     line = file.readline()
         else :
+            print(line)
             fp.write(line)
             line = file.readline()
 file.close()
