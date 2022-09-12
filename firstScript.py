@@ -17,7 +17,7 @@ search_date = ""
 search_date_version = ""
 
 
-tag_var = os.getenv(f"INPUT_{'SOURCE_TAG'}".upper())
+tag_var = os.getenv(f"INPUT_{'$SOURCE_TAG'}".upper())
 
 print(tag_var)
 
