@@ -17,9 +17,8 @@ search_date = ""
 search_date_version = ""
 
 
-tag_var = os.getenv(f"INPUT_{'$SOURCE_TAG'}".upper())
+tag_var = os.getenv(f"INPUT_{'GITHUB_REF_NAME'}".upper())
 
-print(os.environ)
 print(tag_var)
 
 print("stating to read ...")
