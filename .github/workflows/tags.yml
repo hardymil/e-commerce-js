@@ -25,9 +25,8 @@ jobs:
     name: FirstBuildJob
     runs-on: ubuntu-latest 
     steps:
-      - uses: jannekem/run-python-script-action@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
-          script: |            
-            def set_env(name, value):
-            with open(os.getenv("SOURCE_TAG"), ${{ steps.branch_name.outputs.SOURCE_TAG }}) as env:
-            print(f"{name}={_escape_data(value)}", file=env)
+          python-version: '3.7' 
+      - run: python firstScript.py
