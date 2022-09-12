@@ -18,7 +18,7 @@ search_date_version = ""
 
 def set_env(name, value):
     with open(os.getenv('$SOURCE_TAG', 'not found')) as env:
-        print(env)
+        print(env.name)
 
 print("stating to read ...")
 
