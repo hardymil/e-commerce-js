@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest 
     steps:
       - uses: jannekem/run-python-script-action@v1
-      with:
-        script: |
-          add_path("/usr/local/test")
-          set_env("HELLO", "WORLD")
-          group("Messages")
-          print("Sending a message")
-          warning("There might be an issue")
-          end_group()
+        with:
+          script: |
+            add_path("/usr/local/test")
+            set_env("HELLO", "WORLD")
+            group("Messages")
+            print("Sending a message")
+            warning("There might be an issue")
+            end_group()
