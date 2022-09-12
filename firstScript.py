@@ -16,9 +16,10 @@ replace_date_version = version + '.' + datetime.today().strftime('%Y%m%d')
 search_date = ""
 search_date_version = ""
 
-def set_env(name, value):
-    with open(os.getenv('$SOURCE_TAG', 'not found')) as env:
-        print(env.name)
+
+tag_var = os.getenv(f"INPUT_{'SOURCE_TAG'}".upper())
+
+print(tag_var())
 
 print("stating to read ...")
 
