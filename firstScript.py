@@ -16,13 +16,14 @@ replace_date_version = version + '.' + datetime.today().strftime('%Y%m%d')
 search_date = ""
 search_date_version = ""
 
+with open(os.getenv('SOURCE_TAG')) as env:
+    print(os.env)
+    #print(env)
+
 print("stating to read ...")
 
 
-with open(os.getenv('$SOURCE_TAG')) as env:
-    print(env)
-    print(os.environ)
-    print('test')
+    
 # =============================================================================
 # Replace de CabFile
 # =============================================================================
