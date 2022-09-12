@@ -13,6 +13,4 @@ jobs:
       - uses: jannekem/run-python-script-action@v1
         with:
           script: |            
-            def set_env(name, value):
-              with open(os.getenv("GITHUB_ENV"), "a") as env:
-                print(f"{name}={_escape_data(value)}", file=env)
+              print(os.getenv("GITHUB_REF_NAME", " not found"))
