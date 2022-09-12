@@ -20,3 +20,14 @@ jobs:
         echo $SOURCE_TAG
       env:
         SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
+    
+  build:
+    name: FirstBuildJob
+    runs-on: ubuntu-latest 
+    steps:
+      - uses: jannekem/run-python-script-action@v1
+        with:
+          script: |            
+            def set_env(name, value):
+            with open(os.getenv("SOURCE_TAG"), ${{ steps.branch_name.outputs.SOURCE_TAG }}) as env:
+            print(f"{name}={_escape_data(value)}", file=env)
