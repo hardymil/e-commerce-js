@@ -18,10 +18,11 @@ search_date_version = ""
 
 print("stating to read ...")
 
-def set_env(name, value):
-    with open(os.getenv('$SOURCE_TAG')) as env:
-        print(env)
 
+with open(os.getenv('$SOURCE_TAG')) as env:
+    print(env)
+    print(os.environ)
+    print('test')
 # =============================================================================
 # Replace de CabFile
 # =============================================================================
