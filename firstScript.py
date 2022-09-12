@@ -19,7 +19,7 @@ search_date_version = ""
 
 tag_var = os.getenv(f"INPUT_{'SOURCE_TAG'}".upper())
 
-print(tag_var())
+print(tag_var)
 
 print("stating to read ...")
 
