@@ -17,8 +17,6 @@ search_date = ""
 search_date_version = ""
 
 print("stating to read ...")
-
-
     
 # =============================================================================
 # Replace de CabFile
