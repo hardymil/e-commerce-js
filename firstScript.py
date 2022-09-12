@@ -16,7 +16,7 @@ replace_date_version = version + '.' + datetime.today().strftime('%Y%m%d')
 search_date = ""
 search_date_version = ""
 
-with open(os.getenv('SOURCE_TAG')) as env:
+with open(os.getenv('SOURCE_TAG', "not found")) as env: 
     print(os.env)
     #print(env)
 
