@@ -16,8 +16,6 @@ replace_date_version = version + '.' + datetime.today().strftime('%Y%m%d')
 search_date = ""
 search_date_version = ""
 
-print(tag_var)
-
 print("stating to read ...")
 
 
