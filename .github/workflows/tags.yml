@@ -28,12 +28,12 @@ jobs:
       env:
         SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
     
-  #job-use-tag:
-   # runs-on: ubuntu-latest
-    #steps:
-    #- name: "use the tag in script"
-     # run :
-      #  echo $SOURCE_TAG
+  job-use-tag:
+    runs-on: ubuntu-latest
+    steps:
+    - name: "use the tag in script"
+      run :
+        echo $SOURCE_TAG
         #with:
           #script: |
             #import os
