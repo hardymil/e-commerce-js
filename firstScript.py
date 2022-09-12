@@ -17,7 +17,7 @@ search_date = ""
 search_date_version = ""
 
 
-tag_var = os.getenv(f"INPUT_{'GITHUB_REF_NAME'}".upper())
+tag_var = os.getenv(f"INPUT_{'$GITHUB_REF_NAME'}".upper())
 
 print(tag_var)
 
