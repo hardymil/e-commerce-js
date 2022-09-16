@@ -34,6 +34,7 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
+          ref: ${{ github.ref_name }}
           author_name: Hardy Milalu
           author_email: hmilalu@talend.com
           message: 'lst file changed'
