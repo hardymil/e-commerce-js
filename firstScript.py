@@ -6,8 +6,9 @@ from datetime import datetime
 
 setup_path = "Setup.Lst"
 setup_temp_path = "Setup2.Lst"
-version =  os.getenv("GITHUB_REF_NAME")
-search_cab_file = "DD_V600b.CAB"
+aaDDManager_path = "aaDDManager.DDF"
+version =  "7.15.3"#os.getenv("GITHUB_REF_NAME")
+search_cab_file = "DD_V600b.CAB" #use last version 
 replace_TmpDir = "GSTMP_" + version.replace('.', '_') + ".pwd"
 replace_Spawn = "SETUP" + version.replace('.', '_') + ".EXE"
 replace_cab_file =  "DD_" + version.replace('.', '_') + ".CAB"
@@ -19,7 +20,7 @@ search_date_version = ""
 print("stating to read ...")
     
 # =============================================================================
-# Replace de CabFile
+# Replace de CabFile in Setup.lst
 # =============================================================================
 with open(setup_path, 'r') as f :
 
@@ -40,7 +41,7 @@ with open(setup_path, 'w') as fi :
 fi.close()
 
 # =============================================================================
-# Replace date in DD files
+# Replace DD files's date in Setup.lst
 # =============================================================================
 fp = open(setup_temp_path, 'w')
 with open(setup_path) as file:
@@ -85,3 +86,25 @@ if os.path.exists(setup_path):
     os.remove(setup_path)
 os.rename(setup_temp_path, setup_path)
  
+# =============================================================================
+# Replace de CabFile in aaDDManager
+# =============================================================================
+with open(aaDDManager_path, 'r') as f :
+
+    # Reading the content of the file
+    # using the read() function and storing
+    # them in a new variable
+    data = f.read()
+   
+    # Searching and replacing the text
+    # using the replace() function
+    data = data.replace(search_cab_file, replace_cab_file)
+f.close()
+
+with open(aaDDManager_path, 'w') as fi :
+   
+     # Writing the replaced data in our
+     fi.write(data)
+fi.close()
+
+
